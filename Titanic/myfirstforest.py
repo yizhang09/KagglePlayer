@@ -10,6 +10,7 @@ import numpy as np
 import csv as csv
 from sklearn.ensemble import RandomForestClassifier
 
+
 # Data cleanup
 # TRAIN DATA
 train_df = pd.read_csv('data/train.csv', header=0)        # Load the train file into a dataframe
@@ -19,6 +20,7 @@ train_df = pd.read_csv('data/train.csv', header=0)        # Load the train file 
 
 # female = 0, Male = 1
 train_df['Gender'] = train_df['Sex'].map( {'female': 0, 'male': 1} ).astype(int)
+
 
 # Embarked from 'C', 'Q', 'S'
 # Note this is not ideal: in translating categories to numbers, Port "2" is not 2 times greater than Port "1", etc.
